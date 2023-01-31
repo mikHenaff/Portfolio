@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="img/photo.jpg" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,10 +15,10 @@
 
 <body>
 
-    <section class="home">
-        <div class="profile">
-            <img src="img/photo.jpg" alt="profile photo">
-            <div class="profile-text">
+    <section id="home" class="home">
+        <div id="profile" class="profile">
+            <img id="profile-img" src="img/photo.jpg" alt="profile photo">
+            <div id="profile-text" class="profile-text">
                 <p><span>Bonjour !</span></p>
                 <h1><span>Je suis</span> Mikael Henaff</h1>
                 <p>Développeur Web Junior</p>
@@ -27,7 +28,7 @@
                 class="fa-solid fa-arrow-down-long"></i></button>
     </section>
 
-    <section class="about">
+    <section id="about" class="about">
         <h2>Présentation</h2>
         <hr>
         <div class="about-text">
@@ -36,7 +37,10 @@
             </p>
             <p>Afin de me perfectionner,
                 je recherche une <span>alternance</span> dans le cadre d'une <span>formation de Développeur
-                    Full-Stack</span> (1 an, 3 semaines en entreprise (télétravail possible) / 1 semaine en école).
+                    Full-Stack</span>, spécialisation <span>React</span> et <span>Node.js</span> (1 an, 3 semaines en
+                entreprise
+                (téléprésentiel
+                possible) / 1 semaine en école).
             </p>
             <p><span>Curieux</span>, en désir perpétuel d'acquérir de <span>nouveaux savoirs</span> et
                 d'<span>échanger</span>,
@@ -47,13 +51,14 @@
                 entreprise (<span>contrat d'apprentissage</span> et <span>formation éligible à l'aide exceptionnelle de
                     6000€</span>).</p>
         </div>
-        <div class="cv">
-            <p>Vous trouverez <span>mon CV</span> en format PDF <a href="#">ici</a></p>
+        <div id="cv" class="cv">
+            <p>Vous trouverez <span>mon CV</span> en format PDF <a href="pdf/CV janvier 2023.pdf"
+                    target="_blank">ici</a></p>
         </div>
         <div class="icons">
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-            <a href="mailto:mikhenaff@yahoo.fr"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/mikael-henaff"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.github.com/mikHenaff"><i class="fa-brands fa-github"></i></a>
+            <a id="email" href="mailto:mikhenaff@yahoo.fr"><i class="fa-regular fa-envelope"></i></a>
         </div>
         <div class="about-btns">
             <button id="scroll-down-2" class="scroll-btn scroll-down-btn about-scroll-down-btn"><i
@@ -63,8 +68,8 @@
         </div>
     </section>
 
-    <section class="projects">
-        <h2>Mon projet de fin de formation</h2>
+    <section id="projects" class="projects">
+        <h2 id="projects-title">Mon projet de fin de formation</h2>
         <hr>
         <div id="modal-container" class="modal-container">
             <div class="overlay modal-trigger"></div>
@@ -75,27 +80,33 @@
                 <div class="modal-imgs">
                     <div class="modal-img">
                         <img src="img/projet-formation.png" alt="Accueil MonCinéClub">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure veniam adipisci illum odio
-                            quae
-                            sapiente!</p>
+                        <h4>Technos:</h4>
+                        <ul>
+                            <li>HTML/CSS</li>
+                            <li>Javascript</li>
+                            <li>PHP</li>
+                            <li>MySQL</li>
+                        </ul>
                     </div>
                     <div class="modal-img">
                         <img src="img/collection.png" alt="Collection MonCinéClub">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure veniam adipisci illum odio
-                            quae
-                            sapiente!</p>
+                        <h4>Description:</h4>
+                        <p>Une <strong>application cinéma</strong> qui permet à l'utilisateur de <strong>se créer un
+                                compte</strong> et de <strong>collectionner les infos relatives aux films de sa
+                                vidéothèque</strong>, de s'informer sur les films les plus récents, les plus populaires
+                            ou ceux bientôt en salle, et de rechercher des infos par titre de film.</p>
                     </div>
                 </div>
             </div>
         </div>
         <div id="project" class="project">
             <div class="overlay-image modal-trigger">
-                <img src="img/projet-formation.png" alt="page d'accueil du projet MonCinéClub">
-                <div class="hover-image">
+                <img id="project-img" src="img/projet-formation.png" alt="page d'accueil du projet MonCinéClub">
+                <div id="hover-image" class="hover-image">
                     <p>Cliquez pour voir la description</p>
                 </div>
             </div>
-            <h3>MonCinéClub (lien vers le site <a href="#">ici</a>)</h3>
+            <h3>MonCinéClub <!--(lien vers le site <a href="#">ici</a>)--></h3>
             <p>Octobre 2022</p>
         </div>
         <button id="scroll-up-2" class="scroll-btn scroll-up-btn projects-scroll-up-btn"><i

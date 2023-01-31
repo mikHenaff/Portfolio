@@ -16,12 +16,13 @@ body {
     width: 100vw;
     max-width: 100%;
     height: 100vh;
-    background-image: url("img/illus2.jpg");
+    background-image: url("img/illustration.jpg");
     background-size: cover;
 }
 
 .profile {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     height: 350px;
@@ -29,10 +30,11 @@ body {
 
 .profile img {
     margin-left: 50px;
-    width: 240px;
+    width: 200px;
     height: 250px;
-    border: 10px solid #333;
-    border-radius: 50%;
+    border: 5px solid #bbb;
+    outline: 5px solid #333;
+    outline-offset: -10px;
 }
 
 .profile-text {
@@ -182,7 +184,10 @@ body {
     background-color: #333333d3;
     color: #ddd;
     font-weight: 900;
+    outline: 3px solid #ddd;
+    outline-offset: -20px;
     padding: 30px;
+    cursor: pointer;
 }
 
 .overlay-image:hover .hover-image {
@@ -274,7 +279,7 @@ footer {
 
 .modal {
     width: 70%;
-    height: 70%;
+    height: fit-content;
     background-color: #ddd;
     position: absolute;
     top: 40%;
@@ -299,7 +304,7 @@ footer {
 
 .modal-imgs {
     display: flex;
-    margin-top: 7%;
+    margin: 3%;
 }
 
 .modal-img {
@@ -307,12 +312,18 @@ footer {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 300px;
+    height: fit-content;
     padding: 30px;
 }
 
-.modal-img p {
-    margin-top: 40px;
+.modal-img h4 {
+    font-size: 1.6rem;
+    margin: 20px;
+}
+
+.modal-img ul {
+    margin: 0;
+    padding: 0;
 }
 
 .modal img {
@@ -330,4 +341,101 @@ footer {
     right: 10px;
     cursor: pointer;
     color: #333;
+}
+
+/*********************************************************************************/
+/************************* media queries *****************************************/
+/*********************************************************************************/
+
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+
+    .home {
+        background-position: -100px 100px;
+    }
+
+    .about p {
+        margin: 20px;
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+
+    .profile {
+        height: 80vh;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .profile img {
+        width: 150px;
+        height: 200px;
+        align-self: start;
+        margin-top: 30px;
+    }
+
+    .profile-text {
+        align-self: start;
+        margin-left: 30px;
+        margin-top: 270px;
+    }
+
+    .profile-text span {
+        font-size: 2rem;
+    }
+
+    .profile-text p,
+    .profile-text h1 {
+        font-size: 3.3rem;
+    }
+
+    .home-scroll-down-btn {
+        right: 10%;
+        left: unset;
+    }
+
+    .about-text {
+        width: 80%;
+    }
+
+    .about h2,
+    .projects h2 {
+        font-size: 2.5rem;
+    }
+
+    .about p {
+        margin: 15px;
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+
+    .about {
+        height: fit-content;
+        padding-bottom: 20px;
+    }
+
+    .about h2,
+    .projects h2 {
+        font-size: 2rem;
+    }
+
+    /*.about p {
+        margin: 10px;
+    }*/
+
+    .about p {
+        margin: 20px;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        text-align: start;
+    }
+
+    .scroll-btn {
+        display: none;
+    }
 }
