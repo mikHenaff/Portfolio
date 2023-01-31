@@ -45,6 +45,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
     });
 
+    const scrollUpBtnHalf = document.getElementById('scroll-up-half');
+
+    scrollUpBtnHalf.addEventListener('click', () => {
+
+        window.scroll({
+            top: (0 + pageHeight),
+            behavior: 'smooth'
+        });
+
+    });
+
     const modalContainer = document.getElementById('modal-container');
     const modalTriggers = document.querySelectorAll('.modal-trigger');
 

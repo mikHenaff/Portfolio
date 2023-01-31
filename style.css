@@ -250,8 +250,16 @@ footer {
     bottom: 100px;
 }
 
+.projects-scroll-up-btn-half {
+    display: block;
+    position: absolute;
+    right: 15%;
+    bottom: 100px;
+}
+
 .fa-arrow-down-long,
-.fa-arrow-turn-up {
+.fa-arrow-turn-up,
+.fa-arrow-up {
     font-size: 30px;
 }
 
